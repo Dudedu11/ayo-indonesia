@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "517b965d-a634-452e-a830-5de0bc87bfe9",
+		"name": "ayo-indonesia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28920629"
+	},
+	"item": [
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"Dimas Aryaguna\",\r\n    \"height\": 180.0,\r\n    \"weight\": 74.0,\r\n    \"position\": \"penyerang\",\r\n    \"number\": 70,\r\n    \"team_id\": 4\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/players",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Kakang Test\",\r\n  \"height\": 180.5,\r\n  \"weight\": 75.0,\r\n  \"position\": \"bertahan\",\r\n  \"number\": 5,\r\n  \"team_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/players/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"players",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Top Score",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Kakang Test\",\r\n  \"height\": 180.5,\r\n  \"weight\": 75.0,\r\n  \"position\": \"bertahan\",\r\n  \"number\": 5,\r\n  \"team_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/players/top-score",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"players",
+								"top-score"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Create Teams",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"Arema FC\",\r\n    \"logo_url\": \"Arema.png\",\r\n    \"founded_year\": 1987,\r\n    \"base_address\": \"Jl. Mayjen Pandjaitan No.42, Blimbing\",\r\n    \"base_city\": \"Malang\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/teams",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/teams",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teams By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/teams/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Teams",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Persib Bandung\",\r\n        \"logo_url\": \"https://persib.com/logo.png\",\r\n        \"founded_year\": 1933,\r\n        \"base_address\": \"Jalan Sulanjana No.17\",\r\n        \"base_city\": \"Bandung\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/teams/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Teams",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/teams/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"date\": \"2025-11-26T00:00:00Z\",\r\n    \"time\": \"19:00\",\r\n    \"home_team_id\": 3,\r\n    \"away_team_id\": 4\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/matchs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"matchs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"date\": \"2025-11-26T00:00:00Z\",\r\n    \"time\": \"19:00\",\r\n    \"home_team_id\": 3,\r\n    \"away_team_id\": 4\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/matchs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"matchs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Goal",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"match_id\": 1,\r\n    \"player_id\": 4,\r\n    \"team_id\": 1,\r\n    \"minute\": 77\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/goal-details",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"goal-details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match Result",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"match_id\" : 2,\r\n    \"home_score\" : 0,\r\n    \"away_score\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/match-results",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"match-results"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost:8080",
+			"type": "default"
+		}
+	]
+}
